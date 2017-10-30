@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Weather</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>Weather panel.</h1>
+    <h2>Please fill up weather forms below: </h2>
+</div>
+<div style="text-align: center">
+    <form th:action="@{/}" method="post">
+        <div>
+            <input th:placeholder="Temperature" th:name="temperature" required="required"/>
+            <input th:placeholder="Humidity" th:name="humidity" required="required"/>
+            <input th:placeholder="Pressure" th:name="pressure" required="required"/>
+        </div>
+        <div style="text-align: center; padding-top: 10px">
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>
